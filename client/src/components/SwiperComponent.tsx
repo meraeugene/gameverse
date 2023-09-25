@@ -77,10 +77,10 @@ const SwiperComponent = ({ games }: { games?: GameInfo[] }) => {
                 loading="lazy"
               />
               <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-2 mt-0 lg:mt-1 mb-1 flex-wrap">
+                <div className="flex items-center gap-[.4rem] mt-0 lg:mt-1 mb-1 flex-wrap">
                   {game.platforms.map((item, index) => (
                     <div
-                      className="text-xs border px-2 py-[0.20em] lg:py-[.40em] md:px-1 rounded-sm tracking-widest text-gray-200"
+                      className="text-[10px] border px-1 py-[0.20em] lg:py-[.40em] md:px-1 rounded-sm tracking-widest text-gray-200"
                       key={index}
                     >
                       {item}

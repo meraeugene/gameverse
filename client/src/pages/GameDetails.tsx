@@ -180,14 +180,14 @@ const GameDetails = () => {
             <div className="flex justify-between items-center gap-4 mb-6 lg:mb-6">
               <div className="flex gap-3 items-center">
                 <button
-                  className="bg-[#010101] border border-[#27272A] rounded-sm h-[40px] w-[40px] text-lg hover:border-white "
+                  className="bg-[#010101] border border-[#27272A] rounded-sm h-[45px] w-[45px] text-lg hover:border-white "
                   onClick={handleDecreaseQuantity}
                 >
                   -
                 </button>
                 <span>{quantity}</span>
                 <button
-                  className="bg-[#010101] border border-[#27272A] rounded-sm h-[40px] w-[40px] text-lg hover:border-white "
+                  className="bg-[#010101] border border-[#27272A] rounded-sm h-[45px] w-[45px] text-lg hover:border-white "
                   onClick={handleIncreaseQuantity}
                 >
                   +
@@ -195,7 +195,7 @@ const GameDetails = () => {
               </div>
 
               <button
-                className="bg-[#010101] w-full justify-center border border-[#27272A] rounded-sm px-2 h-[40px]  text-sm flex items-center gap-2 font-semibold text-[#f5f5fa] hover:border-white "
+                className="bg-[#010101] w-full justify-center border border-[#27272A] rounded-sm px-2 h-[45px]  text-sm flex items-center gap-2 font-semibold text-[#f5f5fa] hover:border-white "
                 onClick={handleAddToCart}
               >
                 <svg
@@ -216,7 +216,7 @@ const GameDetails = () => {
               </button>
             </div>
 
-            <button className=" bg-[#010101] border border-[#27272A] text-[#f5f5fa]  hover:border-white w-full py-2 rounded-sm">
+            <button className=" bg-[#010101] border border-[#27272A] text-[#f5f5fa]  hover:border-white w-full h-[45px] rounded-sm">
               Buy Now
             </button>
           </div>

@@ -14,6 +14,7 @@ import { subMenuData } from "../data/localdata";
 import { formatPrice } from "../utils/formatPrice";
 import { searchUtil } from "../utils/searchUtil";
 import { SearchResults } from "../types/types";
+import { Tooltip } from "@chakra-ui/react";
 
 const Header = () => {
   const [hideNav, setHideNav] = useState(true);
@@ -90,7 +91,7 @@ const Header = () => {
     <>
       {hideNav && (
         <nav
-          className={`fixed flex top-0 w-full border border-b-[#373737] border-t-0 border-l-0 border-r-0 z-50    items-center justify-between navbg text-[#FAFAFA] px-4 h-[55px] md:px-12 ${
+          className={`fixed flex top-0 w-full border border-b-[#373737] border-t-0 border-l-0 border-r-0 z-50    items-center justify-between navbg text-[#FAFAFA] px-4 h-[45px] md:px-12 ${
             cartState ? "hidden" : "block"
           }`}
         >
@@ -158,42 +159,46 @@ const Header = () => {
 
           <div className="flex items-center gap-[.6em]">
             {isHomePage || isProductPage || isGamePage ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="#c4c4d0"
-                className="w-6 h-6 cursor-pointer "
-                onClick={() => {
-                  setShowSearchNav(true);
-                  document.body.classList.add("menu-open");
-                }}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                />
-              </svg>
+              <Tooltip label="Search">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="#c4c4d0"
+                  className="w-6 h-6 cursor-pointer "
+                  onClick={() => {
+                    setShowSearchNav(true);
+                    document.body.classList.add("menu-open");
+                  }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  />
+                </svg>
+              </Tooltip>
             ) : null}
 
             {/* cart icon */}
             <div className="relative cursor-pointer" onClick={openCart}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="#c4c4d0"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                />
-              </svg>
+              <Tooltip label="Shopping Cart">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="#c4c4d0"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+                  />
+                </svg>
+              </Tooltip>
               <div className="absolute -top-1 -right-1 bg-white text-slate-900 shadow-slate-100 w-4 h-4 text-[0.70rem] leading-tight font-bold rounded-full flex items-center justify-center cursor-pointer ">
                 {cartItems.length}
               </div>

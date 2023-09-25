@@ -57,9 +57,6 @@ const Home = () => {
                   alt={item.title}
                   loading="lazy"
                 />
-                <button className="absolute right-[10px] bottom-[10px]  text-sm px-2 py-1 rounded-sm bg-[#111111] text-[#fff] lg:text-base lg:px-3 lg:bottom-[15px] lg:right-[15px]  border border-[#373737]">
-                  Shop Now
-                </button>
               </div>
             </Link>
           </div>
