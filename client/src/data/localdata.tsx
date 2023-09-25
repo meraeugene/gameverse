@@ -1,7 +1,7 @@
 export const heroImagesSlider = [
   {
     id: 1,
-    location: "/images/spiderman2.jpg",
+    location: "/images/spiderman2.webp",
     alt: "spiderman 2",
   },
   {
@@ -25,25 +25,21 @@ export const subMenuData = [
   {
     id: 2,
     title: "PS4 Games",
-    image: "/images/submenu/ps4.webp",
     link: "ps4-games",
   },
   {
     id: 3,
     title: "PS5 Games",
-    image: "/images/submenu/ps5.jpg",
     link: "ps5-games",
   },
   {
     id: 4,
     title: "XBOX Games",
-    image: "/images/submenu/xbox.jpg",
     link: "xbox-games",
   },
   {
     id: 5,
     title: "Gaming Peripherals",
-    image: "/images/submenu/gp.jpg",
     link: "gaming-peripherals",
   },
 ];
@@ -102,76 +98,76 @@ export const genreImagesData = [
 export const gamingPeripheralsCategory = [
   {
     id: 1,
-    location: "/images/categories/webcam.png",
+    location: "/images/categories/webcam.webp",
     title: "Webcam",
   },
   {
     id: 2,
-    location: "/images/categories/controller.png",
+    location: "/images/categories/controller.webp",
     title: "Controller",
   },
   {
     id: 3,
-    location: "/images/categories/gamingchair.png",
+    location: "/images/categories/gamingchair.webp",
     title: "Gaming-Chair",
   },
   {
     id: 4,
-    location: "/images/categories/gpu.png",
+    location: "/images/categories/gpu.webp",
     title: "Graphics-Card",
   },
   {
     id: 5,
-    location: "/images/categories/headphones.png",
+    location: "/images/categories/headphones.webp",
     title: "Headset",
   },
   {
     id: 6,
-    location: "/images/categories/keyboard.png",
+    location: "/images/categories/keyboard.webp",
     title: "Keyboard",
   },
   {
     id: 7,
-    location: "/images/categories/microphone.png",
+    location: "/images/categories/microphone.webp",
     title: "Microphone",
   },
   {
     id: 8,
-    location: "/images/categories/monitor.png",
+    location: "/images/categories/monitor.webp",
     title: "Monitor",
   },
   {
     id: 9,
-    location: "/images/categories/motherboard.png",
+    location: "/images/categories/motherboard.webp",
     title: "Motherboard",
   },
   {
     id: 10,
-    location: "/images/categories/mouse.png",
+    location: "/images/categories/mouse.webp",
     title: "Mouse",
   },
   {
     id: 11,
-    location: "/images/categories/router.png",
+    location: "/images/categories/router.webp",
     title: "Router",
   },
 ];
 
 export const gpGridImages = [
   {
-    image: "/images/gpgrid/hyperx.jpg",
+    image: "/images/gpgrid/hyperx.webp",
     title: "hyperx",
   },
   {
-    image: "/images/gpgrid/razer.jpg",
+    image: "/images/gpgrid/razer.webp",
     title: "razer",
   },
   {
-    image: "/images/gpgrid/rog.jpg",
+    image: "/images/gpgrid/rog.webp",
     title: "rog",
   },
   {
-    image: "/images/gpgrid/xbox.jpg",
+    image: "/images/gpgrid/xbox.webp",
     title: "xbox",
   },
 ];
@@ -206,8 +202,8 @@ export const gamingPeripheralsData = [
     images: [
       "images/gamingPeripherals/blackwidow/1.webp",
       "images/gamingPeripherals/blackwidow/2.webp",
-      "images/gamingPeripherals/blackwidow/3.jpg",
-      "images/gamingPeripherals/blackwidow/4.jpg",
+      "images/gamingPeripherals/blackwidow/3.webp",
+      "images/gamingPeripherals/blackwidow/4.webp",
     ],
     price: 10995,
     likes: generateRandomLikes(),
@@ -221,10 +217,10 @@ export const gamingPeripheralsData = [
     brand: "HyperX",
     category: "Headset",
     images: [
-      "images/gamingPeripherals/cloudstinger/1.jpg",
-      "images/gamingPeripherals/cloudstinger/2.jpg",
-      "images/gamingPeripherals/cloudstinger/3.jpg",
-      "images/gamingPeripherals/cloudstinger/4.jpg",
+      "images/gamingPeripherals/cloudstinger/1.webp",
+      "images/gamingPeripherals/cloudstinger/2.webp",
+      "images/gamingPeripherals/cloudstinger/3.webp",
+      "images/gamingPeripherals/cloudstinger/4.webp",
     ],
     price: 1790,
     likes: generateRandomLikes(),
@@ -237,10 +233,9 @@ export const gamingPeripheralsData = [
     brand: "ROG",
     category: "Keyboard",
     images: [
-      "images/gamingPeripherals/rogstrix2/1.jpg",
-      "images/gamingPeripherals/rogstrix2/2.jpg",
-      "images/gamingPeripherals/rogstrix2/3.jpg",
-      "images/gamingPeripherals/rogstrix2/4.jpg",
+      "images/gamingPeripherals/rogstrix2/1.webp",
+      "images/gamingPeripherals/rogstrix2/2.webp",
+      "images/gamingPeripherals/rogstrix2/3.webp",
     ],
     price: 6990,
     likes: generateRandomLikes(),
@@ -253,10 +248,10 @@ export const gamingPeripheralsData = [
     brand: "Xbox",
     category: "Console",
     images: [
-      "images/gamingPeripherals/xboxwhite/1.jpg",
-      "images/gamingPeripherals/xboxwhite/2.jpg",
-      "images/gamingPeripherals/xboxwhite/3.jpg",
-      "images/gamingPeripherals/xboxwhite/4.jpg",
+      "images/gamingPeripherals/xboxwhite/1.webp",
+      "images/gamingPeripherals/xboxwhite/2.webp",
+      "images/gamingPeripherals/xboxwhite/3.webp",
+      "images/gamingPeripherals/xboxwhite/4.webp",
     ],
     price: 15995,
     likes: generateRandomLikes(),
@@ -269,10 +264,10 @@ export const gamingPeripheralsData = [
     brand: "Xbox",
     category: "Console",
     images: [
-      "images/gamingPeripherals/xboxasian/1.jpg",
-      "images/gamingPeripherals/xboxasian/2.jpg",
-      "images/gamingPeripherals/xboxasian/3.jpg",
-      "images/gamingPeripherals/xboxasian/4.jpg",
+      "images/gamingPeripherals/xboxasian/1.webp",
+      "images/gamingPeripherals/xboxasian/2.webp",
+      "images/gamingPeripherals/xboxasian/3.webp",
+      "images/gamingPeripherals/xboxasian/4.webp",
     ],
     price: 32995,
     likes: generateRandomLikes(),
@@ -285,8 +280,8 @@ export const gamingPeripheralsData = [
     brand: "playstation",
     category: "webcam",
     images: [
-      "images/gamingPeripherals/ps5camera/1.jpg",
-      "images/gamingPeripherals/ps5camera/2.jpg",
+      "images/gamingPeripherals/ps5camera/1.webp",
+      "images/gamingPeripherals/ps5camera/2.webp",
     ],
     price: 3290,
     likes: generateRandomLikes(),
@@ -299,8 +294,8 @@ export const gamingPeripheralsData = [
     brand: "xbox",
     category: "controller",
     images: [
-      "images/gamingPeripherals/xboxcontroller/1.jpg",
-      "images/gamingPeripherals/xboxcontroller/2.jpg",
+      "images/gamingPeripherals/xboxcontroller/1.webp",
+      "images/gamingPeripherals/xboxcontroller/2.webp",
     ],
     price: 3290,
     likes: generateRandomLikes(),
@@ -313,9 +308,9 @@ export const gamingPeripheralsData = [
     brand: "razer",
     category: "gaming-chair",
     images: [
-      "images/gamingPeripherals/razeriskur/1.jpg",
-      "images/gamingPeripherals/razeriskur/2.jpg",
-      "images/gamingPeripherals/razeriskur/3.jpg",
+      "images/gamingPeripherals/razeriskur/1.webp",
+      "images/gamingPeripherals/razeriskur/2.webp",
+      "images/gamingPeripherals/razeriskur/3.webp",
     ],
     price: 16450,
     likes: generateRandomLikes(),
@@ -328,9 +323,9 @@ export const gamingPeripheralsData = [
     brand: "gigabyte",
     category: "graphics-card",
     images: [
-      "images/gamingPeripherals/gpu/1.jpg",
-      "images/gamingPeripherals/gpu/2.jpg",
-      "images/gamingPeripherals/gpu/3.jpg",
+      "images/gamingPeripherals/gpu/1.webp",
+      "images/gamingPeripherals/gpu/2.webp",
+      "images/gamingPeripherals/gpu/3.webp",
     ],
     price: 16495,
     likes: generateRandomLikes(),
@@ -343,9 +338,9 @@ export const gamingPeripheralsData = [
     brand: "tenda",
     category: "router",
     images: [
-      "images/gamingPeripherals/router/1.jpg",
-      "images/gamingPeripherals/router/2.jpg",
-      "images/gamingPeripherals/router/3.jpg",
+      "images/gamingPeripherals/router/1.webp",
+      "images/gamingPeripherals/router/2.webp",
+      "images/gamingPeripherals/router/3.webp",
     ],
     price: 2195,
     likes: generateRandomLikes(),
@@ -358,8 +353,8 @@ export const gamingPeripheralsData = [
     brand: "razer",
     category: "mouse",
     images: [
-      "images/gamingPeripherals/gamingmouse/1.jpg",
-      "images/gamingPeripherals/gamingmouse/2.jpg",
+      "images/gamingPeripherals/gamingmouse/1.webp",
+      "images/gamingPeripherals/gamingmouse/2.webp",
     ],
     price: 2095,
     likes: generateRandomLikes(),
@@ -372,9 +367,9 @@ export const gamingPeripheralsData = [
     brand: "gigabyte",
     category: "motherboard",
     images: [
-      "images/gamingPeripherals/motherboard/1.jpg",
-      "images/gamingPeripherals/motherboard/2.jpg",
-      "images/gamingPeripherals/motherboard/3.jpg",
+      "images/gamingPeripherals/motherboard/1.webp",
+      "images/gamingPeripherals/motherboard/2.webp",
+      "images/gamingPeripherals/motherboard/3.webp",
     ],
     price: 18895,
     likes: generateRandomLikes(),
@@ -387,9 +382,9 @@ export const gamingPeripheralsData = [
     brand: "Acer",
     category: "monitor",
     images: [
-      "images/gamingPeripherals/gamingmonitor/1.jpg",
-      "images/gamingPeripherals/gamingmonitor/2.jpg",
-      "images/gamingPeripherals/gamingmonitor/3.jpg",
+      "images/gamingPeripherals/gamingmonitor/1.webp",
+      "images/gamingPeripherals/gamingmonitor/2.webp",
+      "images/gamingPeripherals/gamingmonitor/3.webp",
     ],
     price: 24995,
     likes: generateRandomLikes(),
@@ -402,9 +397,9 @@ export const gamingPeripheralsData = [
     brand: "HyperX",
     category: "microphone",
     images: [
-      "images/gamingPeripherals/microphone/1.jpg",
-      "images/gamingPeripherals/microphone/2.jpg",
-      "images/gamingPeripherals/microphone/3.jpg",
+      "images/gamingPeripherals/microphone/1.webp",
+      "images/gamingPeripherals/microphone/2.webp",
+      "images/gamingPeripherals/microphone/3.webp",
     ],
     price: 6490,
     likes: generateRandomLikes(),
@@ -423,7 +418,7 @@ export const gamesData = [
     platforms: [
       {
         name: "PS5",
-        location: "/images/games/ps5/spiderman2.jpg",
+        location: "/images/games/ps5/spiderman2.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
@@ -439,14 +434,14 @@ export const gamesData = [
     platforms: [
       {
         name: "PS5",
-        location: "/images/games/ps5/mk.jpg",
+        location: "/images/games/ps5/mk.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "XBOX",
-        location: "/images/games/xbox/mk.jfif",
+        location: "/images/games/xbox/mk.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
@@ -463,28 +458,28 @@ export const gamesData = [
     platforms: [
       {
         name: "PS5",
-        location: "/images/games/ps5/nba2k24.jpg",
+        location: "/images/games/ps5/nba2k24.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "PS4",
-        location: "/images/games/ps4/nba2k24.jpg",
+        location: "/images/games/ps4/nba2k24.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "XBOX",
-        location: "/images/games/xbox/nba2k24.jpg",
+        location: "/images/games/xbox/nba2k24.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "PC",
-        location: "/images/games/pc/nba2k24.jpg",
+        location: "/images/games/pc/nba2k24.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
@@ -500,7 +495,7 @@ export const gamesData = [
     platforms: [
       {
         name: "PS5",
-        location: "/images/games/ps5/ufc5.jpg",
+        location: "/images/games/ps5/ufc5.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
@@ -508,7 +503,7 @@ export const gamesData = [
 
       {
         name: "XBOX",
-        location: "/images/games/xbox/ufc5.jpg",
+        location: "/images/games/xbox/ufc5.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
@@ -524,21 +519,21 @@ export const gamesData = [
     platforms: [
       {
         name: "PS5",
-        location: "/images/games/ps5/texaschainsaw.jpg",
+        location: "/images/games/ps5/texaschainsaw.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "PS4",
-        location: "/images/games/ps4/texaschainsaw.jpg",
+        location: "/images/games/ps4/texaschainsaw.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "XBOX",
-        location: "/images/games/xbox/texaschainsaw.jpg",
+        location: "/images/games/xbox/texaschainsaw.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
@@ -554,14 +549,14 @@ export const gamesData = [
     platforms: [
       {
         name: "PS5",
-        location: "/images/games/ps5/gtr7.jpg",
+        location: "/images/games/ps5/gtr7.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "PS4",
-        location: "/images/games/ps4/gtr7.jpg",
+        location: "/images/games/ps4/gtr7.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
@@ -578,21 +573,21 @@ export const gamesData = [
     platforms: [
       {
         name: "PS5",
-        location: "/images/games/ps5/rss.jpg",
+        location: "/images/games/ps5/rss.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "PS4",
-        location: "/images/games/ps4/rss.jpg",
+        location: "/images/games/ps4/rss.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "XBOX",
-        location: "/images/games/xbox/rss.jpg",
+        location: "/images/games/xbox/rss.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
@@ -608,28 +603,28 @@ export const gamesData = [
     platforms: [
       {
         name: "PS5",
-        location: "/images/games/ps5/madden.jpg",
+        location: "/images/games/ps5/madden.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "PS4",
-        location: "/images/games/ps4/madden.jpg",
+        location: "/images/games/ps4/madden.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "XBOX",
-        location: "/images/games/xbox/madden.jpg",
+        location: "/images/games/xbox/madden.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
       },
       {
         name: "PC",
-        location: "/images/games/pc/madden.jpg",
+        location: "/images/games/pc/madden.webp",
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
