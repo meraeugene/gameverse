@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Revamped;
+  src: url(/fonts/Revamped.otf);
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Blur-Effect */
+.blur-effect-theme {
+  @apply bg-[#08080B]  z-[20] transition-all duration-300;
+  overflow-y: auto;
+  padding-bottom: 2em;
+  scroll-behavior: smooth;
+  height: 80vh;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.active {
+  border-bottom: 2px solid rgb(194, 194, 194);
+}
+
+.navbg {
+  backdrop-filter: blur(14.3px);
+  -webkit-backdrop-filter: blur(14.3px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.nav-menu {
+  background-color: red;
+  z-index: 100;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+.title {
+  text-wrap: nowrap;
+  @apply h-[15px] max-w-[150px] overflow-hidden text-ellipsis md:max-w-[105px] lg:max-w-[200px];
+}
+
+.header-cart-title {
+  text-wrap: nowrap;
+  @apply h-[15px] max-w-[230px] overflow-hidden text-ellipsis;
+}
+
+.search-title {
+  text-wrap: nowrap;
+  @apply h-[100%] max-w-[180px] overflow-hidden text-ellipsis md:max-w-[500px];
+}
+
+.gp-grid {
+  display: grid;
+  grid-template-areas:
+    "rog "
+    "hyperx "
+    " razer"
+    "xbox";
+  gap: 1.5em;
+  margin: 4em 0 1em 0;
+  padding: 0 1em;
+}
+
+.gp-grid-rog {
+  grid-area: rog;
+}
+
+.gp-grid-hyperx {
+  grid-area: hyperx;
+}
+.gp-grid-razer {
+  grid-area: razer;
+}
+
+.gp-grid-xbox {
+  grid-area: xbox;
+}
+
+@media screen and (min-width: 768px) {
+  .gp-grid {
+    display: grid;
+    grid-template-areas:
+      "rog rog rog"
+      "hyperx razer xbox";
+    gap: 1.5em;
+    margin: 4em 0 2em 0;
+    padding: 0 1em;
+  }
+
+  .gp-grid-rog {
+    grid-area: rog;
+  }
+
+  .gp-grid-hyperx {
+    grid-area: hyperx;
+  }
+  .gp-grid-razer {
+    grid-area: razer;
+  }
+
+  .gp-grid-xbox {
+    grid-area: xbox;
+  }
+}
