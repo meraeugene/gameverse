@@ -71,7 +71,7 @@ const SwiperGPCategories = () => {
         <SwiperSlide key={item.id}>
           <Link
             to={`/gaming-peripherals?category=${item.title.toLowerCase()}`}
-            className="flex items-center justify-center flex-col bg-[#F5F5F5] h-[130px]  lg:h-[150px]  rounded-md  px-2"
+            className="flex items-center justify-center flex-col bg-[#010101]  h-[130px]  lg:h-[150px]  rounded-md  px-2  border border-[#373737]"
           >
             <img
               src={item.location}
@@ -79,7 +79,7 @@ const SwiperGPCategories = () => {
               className="rounded-sm object-cover w-[50px] mx-auto  "
               loading="lazy"
             />
-            <h1 className="text-black text-sm text-center mt-2  lg:text-lg">
+            <h1 className="text-[#fff] text-sm text-center mt-2  lg:text-lg">
               {item.title}
             </h1>
           </Link>

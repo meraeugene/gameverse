@@ -102,8 +102,8 @@ export const genreImagesData = [
 export const gamingPeripheralsCategory = [
   {
     id: 1,
-    location: "/images/categories/cam.png",
-    title: "Camera",
+    location: "/images/categories/webcam.png",
+    title: "Webcam",
   },
   {
     id: 2,
@@ -283,7 +283,7 @@ export const gamingPeripheralsData = [
     id: generateRandomID(),
     title: "HD Camera for PlayStation 5 [CFI-ZEY1]",
     brand: "playstation",
-    category: "Camera",
+    category: "webcam",
     images: [
       "images/gamingPeripherals/ps5camera/1.jpg",
       "images/gamingPeripherals/ps5camera/2.jpg",

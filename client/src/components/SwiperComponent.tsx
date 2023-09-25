@@ -33,7 +33,7 @@ const SwiperComponent = ({ games }: { games?: GameInfo[] }) => {
         320: {
           slidesPerView: 2,
           slidesPerGroup: 1,
-          spaceBetween: 10,
+          spaceBetween: 15,
         },
         768: {
           slidesPerView: 4,
@@ -73,7 +73,7 @@ const SwiperComponent = ({ games }: { games?: GameInfo[] }) => {
               <img
                 src={game.image}
                 alt={game.title}
-                className="h-[180px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm mb-3 "
+                className="min-h-[150px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm mb-3 "
                 loading="lazy"
               />
               <div className="flex flex-col gap-2">

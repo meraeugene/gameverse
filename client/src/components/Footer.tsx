@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-[#08080B] text-white border border-t-[#27272A] border-b-0 border-l-0 border-r-0 py-8  pb-0 px-0">
+    <div className="bg-[#111111] text-white border border-t-[#27272A] border-b-0 border-l-0 border-r-0 py-8  pb-0 px-0">
       <div className="flex items-center justify-center flex-col ">
         <Link to={"/"} className="text-3xl  font-revamped ">
           GV
@@ -69,7 +69,7 @@ const Footer = () => {
         </h2>
       </div>
 
-      <div className="bg-[#F9F9F9] text-black mt-8  py-1">
+      <div className="bg-[#F9F9F9] text-black mt-8  py-1 px-2 md:px-4">
         <h1 className="text-right font-revamped tracking-widest">Gameverse</h1>
       </div>
     </div>

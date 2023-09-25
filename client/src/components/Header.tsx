@@ -90,7 +90,7 @@ const Header = () => {
     <>
       {hideNav && (
         <nav
-          className={`fixed flex top-0 w-full border border-b-[#373737] border-t-0 border-l-0 border-r-0 z-50   items-center justify-between navbg text-[#FAFAFA] px-4 h-[55px] md:px-12 ${
+          className={`fixed flex top-0 w-full border border-b-[#373737] border-t-0 border-l-0 border-r-0 z-50    items-center justify-between navbg text-[#FAFAFA] px-4 h-[55px] md:px-12 ${
             cartState ? "hidden" : "block"
           }`}
         >
@@ -179,7 +179,7 @@ const Header = () => {
             ) : null}
 
             {/* cart icon */}
-            <div className="relative cursor-pointer">
+            <div className="relative cursor-pointer" onClick={openCart}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -187,7 +187,6 @@ const Header = () => {
                 strokeWidth={1.5}
                 stroke="#c4c4d0"
                 className="w-6 h-6"
-                onClick={openCart}
               >
                 <path
                   strokeLinecap="round"
@@ -222,7 +221,10 @@ const Header = () => {
         <div className="search__container  ">
           <div
             className="overlay w-full h-full  fixed  z-[150]  "
-            style={{ background: "rgba(0,0,0,0.9)" }}
+            style={{
+              background: "rgba(0,0,0,0.8)",
+              backdropFilter: "blur(3px)", // Adjust the blur value as needed
+            }}
             onClick={() => {
               setShowSearchNav(false);
               document.body.classList.remove("menu-open");
@@ -478,73 +480,81 @@ const Header = () => {
           </div>
         ) : (
           <div className="flex flex-col gap-6 px-4 w-full  text-white pt-6">
-            {cartItems.map((item) => (
-              <div
-                className="img__info-container flex gap-3 w-full "
-                key={`${item.title}-${item.name}`}
-              >
-                <img
-                  src={
-                    Array.isArray(item.images) && item.images.length > 0
-                      ? item.images[0]
-                      : item.location
-                  }
-                  alt={item.title}
-                  className="w-[70px] rounded-sm object-cover"
-                  loading="lazy"
-                />
-                <div className="info flex flex-col gap-2 w-full">
-                  <div className="flex  justify-between">
-                    <h1 className="text-xs header-cart-title ">{`${item.title}  `}</h1>
-                    <h3 className="text-sm">
-                      {formatPrice((item.price ?? 0) * (item.quantity ?? 0))}
-                    </h3>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center  gap-2">
+            {cartItems.map((item) => {
+              const link = item.brand
+                ? `/product?category=${item.category?.toLowerCase()}&id=${
+                    item.id
+                  }`
+                : `/game?category=${item.name?.toLowerCase()}&id=${item.id}`;
+              return (
+                <Link
+                  to={link}
+                  className="img__info-container flex gap-3 w-full "
+                  key={`${item.title}-${item.name}`}
+                >
+                  <img
+                    src={
+                      Array.isArray(item.images) && item.images.length > 0
+                        ? item.images[0]
+                        : item.location
+                    }
+                    alt={item.title}
+                    className="w-[70px] rounded-sm object-cover"
+                    loading="lazy"
+                  />
+                  <div className="info flex flex-col gap-2 w-full">
+                    <div className="flex  justify-between">
+                      <h1 className="text-xs header-cart-title ">{`${item.title}  `}</h1>
+                      <h3 className="text-sm">
+                        {formatPrice((item.price ?? 0) * (item.quantity ?? 0))}
+                      </h3>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center  gap-2">
+                        <button
+                          className="bg-white text-sm w-[15px] h-[15px] text-black flex items-center justify-center rounded-sm"
+                          onClick={() =>
+                            dispatch(decreaseItemQuantity({ item: item }))
+                          }
+                        >
+                          -
+                        </button>
+                        <span className="text-sm">{item.quantity}</span>
+                        <button
+                          className="bg-white text-sm w-[15px] h-[15px] text-black flex items-center justify-center rounded-sm"
+                          onClick={() =>
+                            dispatch(increaseItemQuantity({ item: item }))
+                          }
+                        >
+                          +
+                        </button>
+                      </div>
                       <button
-                        className="bg-white text-sm w-[15px] h-[15px] text-black flex items-center justify-center rounded-sm"
-                        onClick={() =>
-                          dispatch(decreaseItemQuantity({ item: item }))
-                        }
+                        className="bg-red-500 text-sm w-[20px] h-[20px] text-black flex items-center justify-center rounded-sm"
+                        onClick={() => {
+                          dispatch(removeItemToCart({ item: item }));
+                        }}
                       >
-                        -
-                      </button>
-                      <span className="text-sm">{item.quantity}</span>
-                      <button
-                        className="bg-white text-sm w-[15px] h-[15px] text-black flex items-center justify-center rounded-sm"
-                        onClick={() =>
-                          dispatch(increaseItemQuantity({ item: item }))
-                        }
-                      >
-                        +
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={1.5}
+                          stroke="#fff"
+                          className="w-4 h-4"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
+                          />
+                        </svg>
                       </button>
                     </div>
-                    <button
-                      className="bg-red-500 text-sm w-[20px] h-[20px] text-black flex items-center justify-center rounded-sm"
-                      onClick={() => {
-                        dispatch(removeItemToCart({ item: item }));
-                      }}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="#fff"
-                        className="w-4 h-4"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                        />
-                      </svg>
-                    </button>
                   </div>
-                </div>
-              </div>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         )}
       </div>

@@ -40,7 +40,7 @@ const Home = () => {
   }
 
   return (
-    <div className="bg-[#101014] text-white pb-6 pt-12 md:px-8 md:pt-14 ">
+    <div className="bg-[#111111] text-white pb-6 pt-12 md:px-8 md:pt-14 ">
       <SwiperHeroImages />
 
       <div className="gp-grid">
@@ -57,7 +57,7 @@ const Home = () => {
                   alt={item.title}
                   loading="lazy"
                 />
-                <button className="absolute right-[10px] bottom-[10px]  text-xs px-2 py-1 rounded-sm bg-white text-black lg:text-base lg:px-3 lg:bottom-[15px] lg:right-[15px] ">
+                <button className="absolute right-[10px] bottom-[10px]  text-sm px-2 py-1 rounded-sm bg-[#111111] text-[#fff] lg:text-base lg:px-3 lg:bottom-[15px] lg:right-[15px]  border border-[#373737]">
                   Shop Now
                 </button>
               </div>
@@ -68,15 +68,15 @@ const Home = () => {
 
       <SwiperGPCategories />
 
-      <div className=" p-4 lg:pb-20 ">
-        <h1 className="font-revamped text-2xl tracking-wider text-center mb-6 lg:text-5xl lg:mb-10 md:text-start pt-2 md:pt-4 text-[#f5f5fa]">
+      <div className=" p-4 py-8 lg:pb-20 ">
+        <h1 className="font-revamped text-3xl tracking-wider text-center mb-6 lg:text-5xl lg:mb-10 md:text-start pt-2 md:pt-4 text-[#f5f5fa]">
           top 10 games
         </h1>
         <SwiperComponent games={top10Games} />
       </div>
 
-      <div className=" p-4 lg:pb-20">
-        <h1 className="font-revamped text-2xl tracking-wider  text-center mb-6 lg:text-5xl lg:mb-10 md:text-start text-[#f5f5fa]">
+      <div className=" p-4 py-8 lg:pb-20">
+        <h1 className="font-revamped text-3xl tracking-wider  text-center mb-6 lg:text-5xl lg:mb-10 md:text-start text-[#f5f5fa]">
           New Games
         </h1>
         <SwiperComponent games={newGames} />

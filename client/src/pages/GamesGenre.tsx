@@ -101,7 +101,7 @@ const GamesGenre = () => {
           <div className="relative ">
             <input
               type="search"
-              className="h-[35px] rounded-sm md:rounded-sm w-full lg:h-[45px] bg-transparent border px-3 lg:pl-9 pl-7 pr-2 lg:w-[350px] text-xs md:w-[280px] lg:text-sm outline-none"
+              className="h-[40px] rounded-sm md:rounded-sm w-full lg:h-[45px] bg-transparent border px-3 lg:pl-9 pl-7 pr-2 lg:w-[350px] text-xs md:w-[280px] lg:text-sm outline-none"
               placeholder="Search game title, game genre"
               value={searchQuery}
               onChange={handleSearch}
@@ -112,7 +112,7 @@ const GamesGenre = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="lg:w-5 lg:h-5 w-4 h-4  absolute left-[8px] lg:left-[10px] top-[10px] lg:top-[12px]"
+              className="lg:w-5 lg:h-5 w-4 h-4  absolute left-[8px] lg:left-[10px] top-[12px] lg:top-[12px]"
             >
               <path
                 strokeLinecap="round"
@@ -126,7 +126,7 @@ const GamesGenre = () => {
           <select
             name="sortOrder"
             className=" bg-white text-black 
-    h-[30px] md:rounded-sm text-md px-1 outline-none text-xs lg:h-[37px] md:text-sm lg:text-base w-full md:w-auto"
+    h-[40px] md:rounded-sm  px-1 outline-none text-md lg:h-[37px] md:text-sm lg:text-base w-full md:w-auto"
             onChange={(e) => setSortOrder(e.target.value)}
           >
             <option value="" hidden>
@@ -149,7 +149,7 @@ const GamesGenre = () => {
               <img
                 src={game.image}
                 alt={`${game.title}-${game.platform} `}
-                className="h-[165px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm mb-3"
+                className="min-h-[150px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm mb-3"
                 loading="lazy"
               />
               <div className="flex flex-col gap-1">

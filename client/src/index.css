@@ -52,21 +52,14 @@ body.menu-open {
   z-index: 100;
 }
 
-@media screen and (max-width: 768px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none !important;
-  }
-}
-
 .title {
   text-wrap: nowrap;
-  @apply h-[15px] max-w-[150px] overflow-hidden text-ellipsis md:max-w-[105px] lg:max-w-[200px];
+  @apply h-[15px] max-w-[100px] overflow-hidden text-ellipsis md:max-w-[105px] lg:max-w-[200px];
 }
 
 .header-cart-title {
   text-wrap: nowrap;
-  @apply h-[15px] max-w-[230px] overflow-hidden text-ellipsis;
+  @apply h-[15px] max-w-[120px] lg:max-w-[200px] overflow-hidden text-ellipsis;
 }
 
 .search-title {
@@ -82,7 +75,7 @@ body.menu-open {
     " razer"
     "xbox";
   gap: 1.5em;
-  margin: 4em 0 1em 0;
+  margin: 1.5em 0 1em 0;
   padding: 0 1em;
 }
 
@@ -99,6 +92,13 @@ body.menu-open {
 
 .gp-grid-xbox {
   grid-area: xbox;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 768px) {

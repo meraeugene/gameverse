@@ -68,7 +68,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="text-white pt-12 pb-0 bg-[#08080B]">
+    <div className="text-white pt-12 pb-0 bg-[#111111]">
       <div className="pt-12 md:px-12">
         <button
           className="flex bg-white text-black w-[100px] items-center justify-center 
@@ -165,14 +165,14 @@ const ProductDetails = () => {
             <div className="flex justify-between items-center gap-4 mb-6 lg:mb-6">
               <div className="flex gap-3 items-center">
                 <button
-                  className="border border-[#27272A] rounded-sm h-[40px] w-[40px] text-lg hover:border-white"
+                  className="border bg-[#010101] border-[#27272A] rounded-sm h-[40px] w-[40px] text-lg hover:border-white"
                   onClick={handleDecreaseQuantity}
                 >
                   -
                 </button>
                 <span>{quantity}</span>
                 <button
-                  className="border border-[#27272A] rounded-sm h-[40px] w-[40px] text-lg hover:border-white "
+                  className="border  bg-[#010101] border-[#27272A] rounded-sm h-[40px] w-[40px] text-lg hover:border-white "
                   onClick={handleIncreaseQuantity}
                 >
                   +
@@ -180,7 +180,7 @@ const ProductDetails = () => {
               </div>
 
               <button
-                className="w-full justify-center border border-[#27272A] rounded-sm px-2 h-[40px]  text-sm flex items-center gap-2 font-semibold hover:border-white "
+                className="w-full bg-[#010101] justify-center border border-[#27272A] rounded-sm px-2 h-[40px]  text-sm flex items-center gap-2 font-semibold hover:border-white "
                 onClick={handleAddToCart}
               >
                 <svg
@@ -201,7 +201,7 @@ const ProductDetails = () => {
               </button>
             </div>
 
-            <button className=" bg-[transparent] border border-[#27272A] text-[#f5f5fa]  hover:border-white w-full py-2 rounded-sm">
+            <button className=" bg-[#010101] border border-[#27272A] text-[#f5f5fa]  hover:border-white w-full py-2 rounded-sm">
               Buy Now
             </button>
           </div>
