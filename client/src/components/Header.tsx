@@ -91,7 +91,7 @@ const Header = () => {
     <>
       {hideNav && (
         <nav
-          className={`fixed flex top-0 w-full border border-b-[#373737] border-t-0 border-l-0 border-r-0 z-50    items-center justify-between navbg text-[#FAFAFA] px-4 h-[45px] md:px-12 ${
+          className={`fixed flex top-0 w-full border border-b-[#373737] border-t-0 border-l-0 border-r-0 z-50    items-center justify-between navbg text-[#FAFAFA] px-4 h-[45px] md:px-12 lg:h-[55px] ${
             cartState ? "hidden" : "block"
           }`}
         >

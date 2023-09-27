@@ -3,6 +3,7 @@ import { useLocation, Link } from "react-router-dom";
 import { gamesData } from "../data/localdata";
 import { Games } from "../types/types";
 import { formatPrice } from "../utils/formatPrice";
+import BlurHashImage from "../components/BlurHashImage";
 
 const GamesGenre = () => {
   const location = useLocation();
@@ -26,6 +27,7 @@ const GamesGenre = () => {
               price: platform.price,
               sold: platform.sold,
               likes: game.likes,
+              hash: platform.hash,
               releasedYear: game.releasedYear,
             };
 
@@ -35,6 +37,8 @@ const GamesGenre = () => {
       }
       return acc;
     }, []);
+
+    console.log(transformedGames);
 
     transformedGames.sort((a, b) => {
       switch (sortOrder) {
@@ -146,11 +150,12 @@ const GamesGenre = () => {
             <Link
               to={`/game?category=${game.platform.toLowerCase()}&id=${game.id}`}
             >
-              <img
+              <BlurHashImage
                 src={game.image}
                 alt={`${game.title}-${game.platform} `}
                 className="min-h-[150px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm mb-3"
-                loading="lazy"
+                hash={game.hash}
+                height={[185, 200, 300]}
               />
               <div className="flex flex-col gap-1">
                 <div className="flex justify-between">
