@@ -22,8 +22,8 @@ const SwiperGPCategories = () => {
       }}
       style={
         {
-          "--swiper-navigation-color": "#010101",
-          "--swiper-pagination-color": "#010101",
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
         } as CSSProperties
       }
       navigation={true}

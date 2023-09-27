@@ -439,7 +439,7 @@ const Header = () => {
 
               <h1 className="font-bold">
                 Your Cart{" "}
-                <span className="font-normal text-xs">{`(${cartItems.length} Items)`}</span>
+                <span className="font-normal text-sm">{`(${cartItems.length} Items)`}</span>
               </h1>
             </div>
 
@@ -492,32 +492,40 @@ const Header = () => {
                   }`
                 : `/game?category=${item.name?.toLowerCase()}&id=${item.id}`;
               return (
-                <Link
-                  to={link}
+                <div
                   className="img__info-container flex gap-3 w-full "
                   key={`${item.title}-${item.name}`}
                 >
-                  <img
-                    src={
-                      Array.isArray(item.images) && item.images.length > 0
-                        ? item.images[0]
-                        : item.location
-                    }
-                    alt={item.title}
-                    className="w-[70px] rounded-sm object-cover"
-                    loading="lazy"
-                  />
+                  <Link to={link} onClick={closeCart}>
+                    <img
+                      src={
+                        Array.isArray(item.images) && item.images.length > 0
+                          ? item.images[0]
+                          : item.location
+                      }
+                      alt={item.title}
+                      className="w-[70px] rounded-sm object-cover"
+                      loading="lazy"
+                    />
+                  </Link>
+
                   <div className="info flex flex-col gap-2 w-full">
                     <div className="flex  justify-between">
-                      <h1 className="text-xs header-cart-title ">{`${item.title}  `}</h1>
-                      <h3 className="text-sm">
+                      <Link
+                        to={link}
+                        key={`${item.title}-${item.name}`}
+                        onClick={closeCart}
+                      >
+                        <h1 className="text-base header-cart-title ">{`${item.title}  `}</h1>
+                      </Link>
+                      <h3 className="text-base">
                         {formatPrice((item.price ?? 0) * (item.quantity ?? 0))}
                       </h3>
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center  gap-2">
                         <button
-                          className="bg-white text-sm w-[15px] h-[15px] text-black flex items-center justify-center rounded-sm"
+                          className="bg-white text-base w-[20px] h-[20px] text-black flex items-center justify-center rounded-sm"
                           onClick={() =>
                             dispatch(decreaseItemQuantity({ item: item }))
                           }
@@ -526,7 +534,7 @@ const Header = () => {
                         </button>
                         <span className="text-sm">{item.quantity}</span>
                         <button
-                          className="bg-white text-sm w-[15px] h-[15px] text-black flex items-center justify-center rounded-sm"
+                          className="bg-white text-base w-[20px] h-[20px] text-black flex items-center justify-center rounded-sm"
                           onClick={() =>
                             dispatch(increaseItemQuantity({ item: item }))
                           }
@@ -535,7 +543,7 @@ const Header = () => {
                         </button>
                       </div>
                       <button
-                        className="bg-red-500 text-sm w-[20px] h-[20px] text-black flex items-center justify-center rounded-sm"
+                        className="bg-red-500 text-sm w-[25px] h-[25px] text-black flex items-center justify-center rounded-sm"
                         onClick={() => {
                           dispatch(removeItemToCart({ item: item }));
                         }}
@@ -557,7 +565,7 @@ const Header = () => {
                       </button>
                     </div>
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>
@@ -565,7 +573,7 @@ const Header = () => {
       </div>
 
       <div
-        className={`fixed bottom-0  right-0 w-full bg-[#08080B]  z-[90] h-[21vh] border border-t-[#27272A] border-b-0 border-l-0 max-w-md border-r-0 text-white px-4 py-2 transition-all duration-300 md:border md:border-l-[#27272A]  md:border-r-0 md:border-b-0 ${
+        className={`fixed bottom-0  right-0 w-full bg-[#08080B]  z-[90] h-[23vh] border border-t-[#27272A] border-b-0 border-l-0 max-w-md border-r-0 text-white px-4  pt-3  transition-all duration-300 md:border md:border-l-[#27272A]  md:border-r-0 md:border-b-0 ${
           cartState
             ? "opacity-100 visible translate-x-0"
             : "opacity-0 invisible translate-x-full"
@@ -573,14 +581,14 @@ const Header = () => {
       >
         <div className="flex items-center justify-between">
           <h1>SUBTOTAL</h1>
-          <span className="bg-white text-black px-2 rounded-sm text-sm">
+          <span className="bg-white text-black px-2 rounded-sm text-base">
             {formatPrice(totalAmount)}
           </span>
         </div>
-        <p className="text-xs pb-3 pt-2 text-center">
+        <p className="text-sm pb-2 pt-3 text-center">
           Taxes and Shipping will Calculate at Shipping
         </p>
-        <button className="flex items-center justify-center w-full bg-white text-black py-1 rounded-sm text-sm">
+        <button className="flex items-center justify-center w-full bg-white text-black py-2 rounded-sm text-sm ">
           Check Out
         </button>
       </div>

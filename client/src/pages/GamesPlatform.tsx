@@ -3,6 +3,7 @@ import { useFilteredPlatformGames } from "../hooks/useFilteredPlatformGames";
 import { Games, Platform } from "../types/types";
 import { useState } from "react";
 import { formatPrice } from "../utils/formatPrice";
+import BlurHashImage from "../components/BlurHashImage";
 
 const GamesPlatform = ({ platformCategory }: { platformCategory: string }) => {
   const filteredGames = useFilteredPlatformGames(platformCategory);
@@ -25,6 +26,7 @@ const GamesPlatform = ({ platformCategory }: { platformCategory: string }) => {
         image: matchingPlatform.location,
         price: matchingPlatform.price,
         sold: matchingPlatform.sold,
+        hash: matchingPlatform.hash,
         likes: game.likes,
         releasedYear: game.releasedYear,
       };
@@ -69,7 +71,7 @@ const GamesPlatform = ({ platformCategory }: { platformCategory: string }) => {
   };
 
   const noSearchResultsMessage = (
-    <div className=" text-gray-400 lg:text-2xl w-full">
+    <div className=" text-gray-400 lg:text-2xl w-full pb-14">
       No search results found.
     </div>
   );
@@ -95,7 +97,7 @@ const GamesPlatform = ({ platformCategory }: { platformCategory: string }) => {
           <div className="relative ">
             <input
               type="search"
-              className="h-[40px] rounded-sm md:rounded-sm w-full lg:h-[45px] bg-transparent border px-3 lg:pl-9 pl-7 pr-2 lg:w-[350px] text-xs md:w-[280px] lg:text-sm outline-none"
+              className="h-[40px] rounded-sm md:rounded-sm w-full lg:h-[45px] bg-transparent border px-3 lg:pl-9 pl-7 pr-2 lg:w-[350px] text-sm md:w-[280px] lg:text-sm outline-none"
               placeholder="Search game title, game genre"
               value={searchQuery}
               onChange={handleSearch}
@@ -121,7 +123,7 @@ const GamesPlatform = ({ platformCategory }: { platformCategory: string }) => {
           <select
             name="sortOrder"
             className="  bg-[#f5f5fa] text-[#17171f] 
-            h-[40px] lg:h-[45px] md:rounded-sm text-md px-1 outline-none text-xs md:text-sm lg:text-base w-full md:w-auto "
+            h-[40px] lg:h-[45px] md:rounded-sm  px-1 outline-none text-sm rounded-sm md:text-sm lg:text-base w-full md:w-auto "
             onChange={(e) => setSortOrder(e.target.value)}
           >
             <option value="" hidden>
@@ -134,38 +136,43 @@ const GamesPlatform = ({ platformCategory }: { platformCategory: string }) => {
           </select>
         </div>
       </div>
-      {filteredAndSortedProducts.length === 0 && noSearchResultsMessage}
-      <div className="grid grid-cols-2 gap-6  pb-12 md:grid-cols-4 lg:grid-cols-5 lg:pb-20">
-        {filteredAndSortedProducts.map((game) => (
-          <div key={game.id}>
-            <Link to={`/game?category=${game.platform}&id=${game.id}`}>
-              <img
-                src={game.image}
-                alt={`${game.title}-${game.platform} `}
-                className="min-h-[150px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm mb-3"
-                loading="lazy"
-              />
-              <div className="flex flex-col gap-1">
-                <div className="flex justify-between">
-                  <span className="text-sm leading-none font-medium block title text-[#f5f5fa] ">{`${
-                    game.title
-                  } for ${game.platform.toUpperCase()}`}</span>
-                  <span className="text-xs">{game.releasedYear}</span>
-                </div>
 
-                <div className="flex items-center gap-1 ">
-                  <h2 className=" text-sm text-[#f5f5fa]">
-                    {formatPrice(game.price)}
-                  </h2>
-                  <span className="text-xs text-gray-400">
-                    {game.sold} sold
-                  </span>
+      {searchQuery.length > 0 && filteredAndSortedProducts.length === 0 ? (
+        noSearchResultsMessage
+      ) : (
+        <div className="grid grid-cols-2 gap-6  pb-12 md:grid-cols-4 lg:grid-cols-5 lg:pb-20">
+          {filteredAndSortedProducts.map((game) => (
+            <div key={game.id}>
+              <Link to={`/game?category=${game.platform}&id=${game.id}`}>
+                <BlurHashImage
+                  src={game.image}
+                  alt={`${game.title}-${game.platform} `}
+                  className="min-h-[150px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm "
+                  height={[180, 200, 300]}
+                  hash={game.hash}
+                />
+                <div className="flex flex-col gap-1 mt-3">
+                  <div className="flex justify-between">
+                    <span className="text-sm leading-none font-medium block title text-[#f5f5fa] ">{`${
+                      game.title
+                    } for ${game.platform.toUpperCase()}`}</span>
+                    <span className="text-xs">{game.releasedYear}</span>
+                  </div>
+
+                  <div className="flex items-center gap-1 ">
+                    <h2 className=" text-sm text-[#f5f5fa]">
+                      {formatPrice(game.price)}
+                    </h2>
+                    <span className="text-xs text-gray-400">
+                      {game.sold} sold
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
+              </Link>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

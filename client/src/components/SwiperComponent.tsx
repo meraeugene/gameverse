@@ -13,6 +13,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { GameInfo } from "../types/types";
 import { formatPrice } from "../utils/formatPrice";
+import BlurHashImage from "./BlurHashImage";
 
 const SwiperComponent = ({ games }: { games?: GameInfo[] }) => {
   return (
@@ -70,13 +71,16 @@ const SwiperComponent = ({ games }: { games?: GameInfo[] }) => {
                 game?.platform || "unknown"
               ).toLowerCase()}&id=${game?.id}`}
             >
-              <img
-                src={game.image}
-                alt={game.title}
-                className="min-h-[150px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm mb-3 "
-                loading="lazy"
-              />
-              <div className="flex flex-col gap-2">
+              {game.image && (
+                <BlurHashImage
+                  src={game.image}
+                  alt={game.title}
+                  className="object-cover"
+                  hash={game.hash}
+                  height={[175, 200, 300]}
+                />
+              )}
+              <div className="flex flex-col gap-2 mt-3">
                 <div className="flex items-center gap-[.4rem] mt-0 lg:mt-1 mb-1 flex-wrap">
                   {game.platforms.map((item, index) => (
                     <div

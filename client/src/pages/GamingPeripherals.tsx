@@ -94,7 +94,7 @@ const GamingPeripherals = () => {
           <div className="relative ">
             <input
               type="search"
-              className="h-[40px] rounded-sm md:rounded-sm w-full lg:h-[45px] bg-transparent border px-3 lg:pl-9 pl-7 pr-2 lg:w-[350px] text-xs md:w-[280px] lg:text-sm outline-none "
+              className="h-[40px] rounded-sm md:rounded-sm w-full lg:h-[45px] bg-transparent border px-3 lg:pl-9 pl-7 pr-2 lg:w-[350px] text-sm md:w-[280px] lg:text-sm outline-none "
               placeholder="Search peripherals, brands, categories"
               value={searchQuery}
               onChange={handleSearch}
@@ -120,7 +120,7 @@ const GamingPeripherals = () => {
           <select
             name="sortOrder"
             className=" bg-[#f5f5fa] text-[#17171f] 
-            h-[40px] lg:h-[45px] md:rounded-sm text-md px-1 outline-none text-sm md:text-sm lg:text-base w-full md:w-auto "
+            h-[40px] lg:h-[45px] md:rounded-sm  px-1 outline-none text-sm rounded-sm md:text-sm lg:text-base w-full md:w-auto "
             onChange={(e) => setSortOrder(e.target.value)}
           >
             <option value="" hidden>
@@ -132,7 +132,9 @@ const GamingPeripherals = () => {
           </select>
         </div>
       </div>
-      {filteredAndSortedProducts.length === 0 && noSearchResultsMessage}
+      {searchQuery.length > 0 &&
+        filteredAndSortedProducts.length === 0 &&
+        noSearchResultsMessage}
       <div className="grid grid-cols-2 gap-6  pb-12 md:grid-cols-4 lg:grid-cols-5   lg:pb-20">
         {filteredAndSortedProducts.map((item) => (
           <div key={item.id}>
@@ -144,9 +146,10 @@ const GamingPeripherals = () => {
               <img
                 src={item.images?.[0]}
                 alt={`${item.title} `}
-                className=" md:h-[200px] lg:h-[230px] w-full object-contain rounded-sm mb-3"
+                className="md:h-[200px] lg:h-[230px] w-full object-contain rounded-sm mb-3"
                 loading="lazy"
               />
+
               <div className="flex flex-col gap-1">
                 <div className="flex justify-between">
                   <span className="text-sm text-[#f5f5fa] leading-none font-medium block title ">{`${item.title} `}</span>

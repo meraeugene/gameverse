@@ -32,6 +32,7 @@ export interface Games {
   sold: number;
   likes: number;
   releasedYear: number;
+  hash: string;
 }
 
 export interface GameInfo {
@@ -45,6 +46,7 @@ export interface GameInfo {
   image?: string; // Optional property
   sold?: number; // Optional property
   price?: number; // Optional property
+  hash: string;
 }
 
 export interface Platform {
@@ -53,6 +55,7 @@ export interface Platform {
   price: number;
   sold: number;
   stocks: number;
+  hash: string;
 }
 
 export interface SelectedGame {

@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <ChakraProvider>
         <Toaster
           position="top-center"
-          toastOptions={{ duration: 1500 }}
+          toastOptions={{ duration: 1000 }}
           reverseOrder={false}
         />
         <App />

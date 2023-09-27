@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { addItemToCart } from "../features/cart/cartSlice";
 import { Product, Platform, SelectedGame } from "../types/types";
 import { formatPrice } from "../utils/formatPrice";
+import BlurHashImage from "../components/BlurHashImage";
 
 const GameDetails = () => {
   const location = useLocation();
@@ -95,7 +96,7 @@ const GameDetails = () => {
       <div className="pt-12 md:px-12">
         <button
           className="flex bg-[#f5f5fa] text-[#17171f] w-[100px] items-center justify-center 
-        rounded-tr-sm rounded-br-sm h-[35px] md:rounded-sm text-md"
+        rounded-tr-sm rounded-br-sm h-[40px] md:rounded-sm text-md"
           onClick={goBack}
         >
           <svg
@@ -121,18 +122,22 @@ const GameDetails = () => {
                 <div
                   className={`${
                     selectedPlatform === platform
-                      ? "border-[2px]  border-white   cursor-pointer  rounded-sm"
+                      ? "border  border-white   cursor-pointer  rounded-sm"
                       : "cursor-pointer"
                   }`}
                   key={index}
+                  onClick={() => handleImageClick(platform)}
                 >
-                  <img
-                    src={platform.location}
-                    alt={`${selectedGame.title} - ${platform.name}`}
-                    className="w-[55px]  lg:w-[60px]    "
-                    onClick={() => handleImageClick(platform)}
-                    loading="lazy"
-                  />
+                  {selectedPlatform && (
+                    <BlurHashImage
+                      src={platform.location}
+                      alt={`${selectedGame.title} - ${platform.name}`}
+                      className={"w-[55px]  lg:w-[60px] object-cover"}
+                      hash={selectedPlatform?.hash}
+                      height={[60, 70, 75]}
+                      width={55}
+                    />
+                  )}
                 </div>
               ))}
             </div>
@@ -180,14 +185,14 @@ const GameDetails = () => {
             <div className="flex justify-between items-center gap-4 mb-6 lg:mb-6">
               <div className="flex gap-3 items-center">
                 <button
-                  className="bg-[#010101] border border-[#27272A] rounded-sm h-[45px] w-[45px] text-lg hover:border-white "
+                  className="bg-[#010101] border border-[#e2e8f0] rounded-sm h-[45px] w-[45px] text-lg hover:border-white "
                   onClick={handleDecreaseQuantity}
                 >
                   -
                 </button>
                 <span>{quantity}</span>
                 <button
-                  className="bg-[#010101] border border-[#27272A] rounded-sm h-[45px] w-[45px] text-lg hover:border-white "
+                  className="bg-[#010101] border border-[#e2e8f0] rounded-sm h-[45px] w-[45px] text-lg hover:border-white "
                   onClick={handleIncreaseQuantity}
                 >
                   +
@@ -195,7 +200,7 @@ const GameDetails = () => {
               </div>
 
               <button
-                className="bg-[#010101] w-full justify-center border border-[#27272A] rounded-sm px-2 h-[45px]  text-sm flex items-center gap-2 font-semibold text-[#f5f5fa] hover:border-white "
+                className="bg-[#010101] w-full justify-center border border-[#e2e8f0] rounded-sm px-2 h-[45px]  text-sm flex items-center gap-2 font-semibold text-[#f5f5fa] hover:border-white "
                 onClick={handleAddToCart}
               >
                 <svg
@@ -216,7 +221,7 @@ const GameDetails = () => {
               </button>
             </div>
 
-            <button className=" bg-[#010101] border border-[#27272A] text-[#f5f5fa]  hover:border-white w-full h-[45px] rounded-sm">
+            <button className=" bg-[#010101] border  text-[#f5f5fa]  border-[#e2e8f0] w-full h-[45px] rounded-sm">
               Buy Now
             </button>
           </div>

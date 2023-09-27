@@ -3,16 +3,19 @@ export const heroImagesSlider = [
     id: 1,
     location: "/images/spiderman2.webp",
     alt: "spiderman 2",
+    blurHashString: "LGFWw,p_GDTd?w?b%M%2%NxvpI%2",
   },
   {
     id: 2,
     location: "/images/gtr7.webp",
     alt: "gtr 7",
+    blurHashString: "LICsOMGwM,jYI[o+D%ImJ;,l%#$d",
   },
   {
     id: 3,
     location: "/images/horizon.webp",
     alt: "horizon",
+    blurHashString: "LHEX0Bvy0MTLGKkE$jIo$,xcRnnh",
   },
 ];
 
@@ -50,48 +53,56 @@ export const genreImagesData = [
     location: "/images/grid/spiderman2.webp",
     alt: "Spiderman 2",
     genre: "Action",
+    hash: "LHG?YaxaE0Ioy;buadM|--oeXmRQ",
   },
   {
     id: 2,
     location: "/images/grid/codmw.webp",
     alt: "Call of Duty Modern Warfare",
     genre: "Shooter",
+    hash: "LOBCV|M{NGxb}[RjR*ozn4s;kCNa",
   },
   {
     id: 3,
     location: "/images/grid/rpg.webp",
     alt: "Vampire",
     genre: "Rpg",
+    hash: "LQAno=ozMJkDT}j]M|WrIqayiwj]",
   },
   {
     id: 4,
     location: "/images/grid/nba2k24.webp",
     alt: "NBA 2k24",
     genre: "Sport",
+    hash: "LwN[LS9%n,aj0bOmjZW;S$s7jEk7",
   },
   {
     id: 5,
     location: "/images/grid/ufc.webp",
     alt: "UFC 5",
     genre: "Fighting",
+    hash: "LNCY{]xuIUs:~WxtaKWBsAofs:WU",
   },
   {
     id: 6,
     location: "/images/grid/texaschainsaw.webp",
     alt: "texas chainsaw",
     genre: "Horror",
+    hash: "LaHwoas:-Us:~AWBxtayNGWVkWj[",
   },
   {
     id: 7,
     location: "/images/grid/granturismo.webp",
     alt: "gran turismo",
     genre: "Racing",
+    hash: "LTEU.sGc9GIpt:OuwNWB0fwK-:XQ",
   },
   {
     id: 8,
     location: "/images/grid/hotwheels.webp",
     alt: "Hotwheels",
     genre: "Arcade",
+    hash: "LaI;YE=|S$jF~VozS~S2%M%L%2xZ",
   },
 ];
 
@@ -157,18 +168,22 @@ export const gpGridImages = [
   {
     image: "/images/gpgrid/hyperx.webp",
     title: "hyperx",
+    blurHashString: "L14oWo=$%jM_DgELRhxu8^wtQ,Rj",
   },
   {
     image: "/images/gpgrid/razer.webp",
     title: "razer",
+    blurHashString: "L155,:_HQvALzVq{MfI;00AVpU+t",
   },
   {
     image: "/images/gpgrid/rog.webp",
     title: "rog",
+    blurHashString: "L38g?LIq00%MRjkD%Mad00~qs.8_",
   },
   {
     image: "/images/gpgrid/xbox.webp",
     title: "xbox",
+    blurHashString: "LC8}DL~qNI00MwM{M{WB9EIn%1?b",
   },
 ];
 
@@ -205,6 +220,7 @@ export const gamingPeripheralsData = [
       "images/gamingPeripherals/blackwidow/3.webp",
       "images/gamingPeripherals/blackwidow/4.webp",
     ],
+
     price: 10995,
     likes: generateRandomLikes(),
     sold: generateRandomSold(),
@@ -277,7 +293,7 @@ export const gamingPeripheralsData = [
   {
     id: generateRandomID(),
     title: "HD Camera for PlayStation 5 [CFI-ZEY1]",
-    brand: "playstation",
+    brand: "Playstation",
     category: "webcam",
     images: [
       "images/gamingPeripherals/ps5camera/1.webp",
@@ -291,7 +307,7 @@ export const gamingPeripheralsData = [
   {
     id: generateRandomID(),
     title: "Xbox Wireless Controller [Carbon Black]",
-    brand: "xbox",
+    brand: "Xbox",
     category: "controller",
     images: [
       "images/gamingPeripherals/xboxcontroller/1.webp",
@@ -305,7 +321,7 @@ export const gamingPeripheralsData = [
   {
     id: generateRandomID(),
     title: "Razer Iskur X Ergonomic Gaming Chair [RZ38-02840100]",
-    brand: "razer",
+    brand: "Razer",
     category: "gaming-chair",
     images: [
       "images/gamingPeripherals/razeriskur/1.webp",
@@ -320,7 +336,7 @@ export const gamingPeripheralsData = [
   {
     id: generateRandomID(),
     title: "Gigabyte GeForce RTX 3050 Eagle 8G Graphics Card",
-    brand: "gigabyte",
+    brand: "Gigabyte",
     category: "graphics-card",
     images: [
       "images/gamingPeripherals/gpu/1.webp",
@@ -335,7 +351,7 @@ export const gamingPeripheralsData = [
   {
     id: generateRandomID(),
     title: "Tenda AC23 AC2100 Dual Band Gigabit WiFi Router",
-    brand: "tenda",
+    brand: "Tenda",
     category: "router",
     images: [
       "images/gamingPeripherals/router/1.webp",
@@ -350,7 +366,7 @@ export const gamingPeripheralsData = [
   {
     id: generateRandomID(),
     title: "Razer Cobra Lightweight RGB Wired Gaming Mouse [Black]    ",
-    brand: "razer",
+    brand: "Razer",
     category: "mouse",
     images: [
       "images/gamingPeripherals/gamingmouse/1.webp",
@@ -365,7 +381,7 @@ export const gamingPeripheralsData = [
     id: generateRandomID(),
     title: "Gigabyte Z690 Aorus PRO Gaming Motherboard    ",
     brand: "gigabyte",
-    category: "motherboard",
+    category: "Motherboard",
     images: [
       "images/gamingPeripherals/motherboard/1.webp",
       "images/gamingPeripherals/motherboard/2.webp",
@@ -380,7 +396,7 @@ export const gamingPeripheralsData = [
     id: generateRandomID(),
     title: "Acer Predator XB273U 27 Gaming Monitor [165Hz]   ",
     brand: "Acer",
-    category: "monitor",
+    category: "Monitor",
     images: [
       "images/gamingPeripherals/gamingmonitor/1.webp",
       "images/gamingPeripherals/gamingmonitor/2.webp",
@@ -422,6 +438,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LeIgf.slWYoc?^WVM{of.TWBkWof",
       },
     ],
   },
@@ -438,6 +455,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LaNAbijD?wxZ%ModIUozb|bIRiax",
       },
       {
         name: "XBOX",
@@ -445,6 +463,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LOK_RWIV~qxb*0IoMw%2kQM{s*oy",
       },
     ],
   },
@@ -462,6 +481,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LvNS8kI]XAsXErWTjXbapZw[adj=",
       },
       {
         name: "PS4",
@@ -469,6 +489,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LiLfIhE+bdsr0uawoIX5G9xAj;fN",
       },
       {
         name: "XBOX",
@@ -476,6 +497,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LoM=n{F3R-V}5LXMWAR*O*xTW9WA",
       },
       {
         name: "PC",
@@ -483,6 +505,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LwN*wuETe@WH52SwfhbGOYs8WAW,",
       },
     ],
   },
@@ -499,6 +522,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LrHdjfJ-RkkC~WNvniWW-=bHs:ju",
       },
 
       {
@@ -507,6 +531,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LoHAhcKPNGWB~COre-Rj-pXSs.V@",
       },
     ],
   },
@@ -523,6 +548,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LaIO2]s+xvxY~qRjWBj[yFWVWWof",
       },
       {
         name: "PS4",
@@ -530,6 +556,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LKGIAq-l-=-n.ARiofWC5_n~kWkC",
       },
       {
         name: "XBOX",
@@ -537,6 +564,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LPHBYhx]xtxa~VNcWARiX,X9R+WA",
       },
     ],
   },
@@ -553,6 +581,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LXG[gBO?RoWA.TS5r=o2yFv}x[oz",
       },
       {
         name: "PS4",
@@ -560,6 +589,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LMECbCTdR-V?KnWYwKWF5u#Q-:tR",
       },
     ],
   },
@@ -577,6 +607,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LzJ89ORPjYay~qNGWBWB%MoLofoL",
       },
       {
         name: "PS4",
@@ -584,6 +615,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LOHenM00e;ax%%NFtQt7Wc_3MxIU",
       },
       {
         name: "XBOX",
@@ -591,6 +623,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LdHB}9ITjFWV_MInWBWBJhoet7t6",
       },
     ],
   },
@@ -607,6 +640,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LoHVPURix^xt~qoga{og-;jZadWA",
       },
       {
         name: "PS4",
@@ -614,6 +648,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LZF6bARO%hxu?wt6ofozXBoJjXRj",
       },
       {
         name: "XBOX",
@@ -621,6 +656,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LeF~,SRP%gs;_Nt7kCWWx@ocawM{",
       },
       {
         name: "PC",
@@ -628,6 +664,7 @@ export const gamesData = [
         stocks: generateRandomStocks(),
         price: generateRandomPrice(),
         sold: generateRandomSold(),
+        hash: "LgFicNRi%ht7_4WVtRt7.7xbt6ay",
       },
     ],
   },

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { genreImagesData } from "../data/localdata";
+import BlurHashImage from "./BlurHashImage";
 
 const GenresGrid = () => {
   return (
@@ -11,11 +12,12 @@ const GenresGrid = () => {
         {genreImagesData.map((item) => (
           <div className="relative cursor-pointer" key={item.id}>
             <Link to={`/games?genre=${item.genre}`}>
-              <img
+              <BlurHashImage
                 src={item.location}
                 alt={item.alt}
-                className="rounded-sm h-full w-full "
-                loading="lazy"
+                className="object-cover rounded-sm "
+                hash={item.hash}
+                height={[155, 150, 290]}
               />
               <div
                 className="absolute inset-0 "

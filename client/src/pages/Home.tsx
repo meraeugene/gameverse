@@ -5,6 +5,7 @@ import SwiperHeroImages from "../components/SwiperHeroImages";
 import SwiperGPCategories from "../components/SwiperGPCategories";
 import { Link } from "react-router-dom";
 import { GameInfo } from "../types/types";
+import BlurHashImage from "../components/BlurHashImage";
 
 const Home = () => {
   const top10Games = [];
@@ -18,6 +19,7 @@ const Home = () => {
       releasedYear: game.releasedYear,
       genre: game.genre,
       platforms: [], // Initialize an empty array for platforms
+      hash: "",
     };
 
     for (const platform of game.platforms) {
@@ -26,6 +28,7 @@ const Home = () => {
         gameInfo.image = platform.location;
         gameInfo.price = platform.price;
         gameInfo.sold = platform.sold;
+        gameInfo.hash = platform.hash;
       }
 
       gameInfo.platforms.push(platform.name); // Add platform name to the platforms array
@@ -51,11 +54,12 @@ const Home = () => {
           >
             <Link to={`/gaming-peripherals?brand=${item.title}`}>
               <div className="relative">
-                <img
+                <BlurHashImage
                   src={item.image}
-                  className="rounded-md h-full w-full"
+                  className="object-cover"
                   alt={item.title}
-                  loading="lazy"
+                  hash={item.blurHashString}
+                  height={[200, 166, 320]}
                 />
               </div>
             </Link>
@@ -66,14 +70,14 @@ const Home = () => {
       <SwiperGPCategories />
 
       <div className=" p-4 py-8 lg:pb-20 ">
-        <h1 className="font-revamped text-3xl tracking-wider text-center mb-6 lg:text-5xl lg:mb-10 md:text-start pt-2 md:pt-4 text-[#f5f5fa]">
+        <h1 className="font-revamped text-3xl tracking-wider  mb-6 lg:text-5xl lg:mb-10 md:text-start pt-2 md:pt-4 text-[#f5f5fa]">
           top 10 games
         </h1>
         <SwiperComponent games={top10Games} />
       </div>
 
       <div className=" p-4 py-8 lg:pb-20">
-        <h1 className="font-revamped text-3xl tracking-wider  text-center mb-6 lg:text-5xl lg:mb-10 md:text-start text-[#f5f5fa]">
+        <h1 className="font-revamped text-3xl tracking-wider   mb-6 lg:text-5xl lg:mb-10 md:text-start text-[#f5f5fa]">
           New Games
         </h1>
         <SwiperComponent games={newGames} />

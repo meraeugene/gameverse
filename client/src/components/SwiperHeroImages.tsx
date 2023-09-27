@@ -12,6 +12,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 import { heroImagesSlider } from "../data/localdata";
+import BlurHashImage from "./BlurHashImage";
 
 const SwiperHeroImages = () => {
   return (
@@ -68,11 +69,12 @@ const SwiperHeroImages = () => {
     >
       {heroImagesSlider.map((item) => (
         <SwiperSlide key={item.id}>
-          <img
+          <BlurHashImage
             src={item.location}
             alt={item.alt}
-            className="rounded-sm object-cover h-full w-[100%] lg:h-[530px]  "
-            loading="lazy"
+            className="rounded-sm object-cover"
+            hash={item.blurHashString}
+            height={[120, 275, 525]}
           />
         </SwiperSlide>
       ))}

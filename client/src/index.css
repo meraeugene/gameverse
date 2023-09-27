@@ -59,7 +59,7 @@ body.menu-open {
 
 .header-cart-title {
   text-wrap: nowrap;
-  @apply h-[15px] max-w-[120px] lg:max-w-[200px] overflow-hidden text-ellipsis;
+  @apply h-[20px] max-w-[160px] lg:max-w-[200px] overflow-hidden text-ellipsis;
 }
 
 .search-title {
