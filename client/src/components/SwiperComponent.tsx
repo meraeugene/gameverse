@@ -75,7 +75,7 @@ const SwiperComponent = ({ games }: { games?: GameInfo[] }) => {
                 <BlurHashImage
                   src={game.image}
                   alt={game.title}
-                  className="object-cover"
+                  className="h-[200px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm "
                   hash={game.hash}
                   height={[200, 200, 300]}
                 />

@@ -148,7 +148,7 @@ const GamesPlatform = ({ platformCategory }: { platformCategory: string }) => {
                   src={game.image}
                   alt={`${game.title}-${game.platform} `}
                   className="h-[200px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm "
-                  height={[180, 200, 300]}
+                  height={[200, 200, 300]}
                   hash={game.hash}
                 />
                 <div className="flex flex-col gap-1 mt-3">
