@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { gamingPeripheralsData } from "../data/localdata";
 import { Product } from "../types/types";
 import { useDispatch } from "react-redux";
@@ -31,8 +31,9 @@ const ProductDetails = () => {
     }
   }, []);
 
+  const navigate = useNavigate();
   const goBack = () => {
-    window.history.back();
+    navigate(-1);
   };
 
   const handleImageClick = (index: number) => {

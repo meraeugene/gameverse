@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { gamesData } from "../data/localdata";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -69,8 +69,9 @@ const GameDetails = () => {
     setQuantity(1);
   };
 
+  const navigate = useNavigate();
   const goBack = () => {
-    window.history.back();
+    navigate(-1);
   };
 
   const handleDecreaseQuantity = () => {
