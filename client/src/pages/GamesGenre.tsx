@@ -38,8 +38,6 @@ const GamesGenre = () => {
       return acc;
     }, []);
 
-    console.log(transformedGames);
-
     transformedGames.sort((a, b) => {
       switch (sortOrder) {
         case "latest":
@@ -153,11 +151,11 @@ const GamesGenre = () => {
               <BlurHashImage
                 src={game.image}
                 alt={`${game.title}-${game.platform} `}
-                className="min-h-[150px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm mb-3"
+                className="min-h-[150px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm "
                 hash={game.hash}
                 height={[185, 200, 300]}
               />
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 mt-1">
                 <div className="flex justify-between">
                   <span className="text-sm leading-none font-medium block title ">{`${
                     game.title

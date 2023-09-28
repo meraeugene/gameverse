@@ -134,7 +134,7 @@ const GameDetails = () => {
                       alt={`${selectedGame.title} - ${platform.name}`}
                       className={"w-[55px]  lg:w-[60px] object-cover"}
                       hash={selectedPlatform?.hash}
-                      height={[60, 70, 75]}
+                      height={[55, 70, 75]}
                       width={55}
                     />
                   )}
@@ -146,7 +146,6 @@ const GameDetails = () => {
                 src={selectedPlatform?.location || ""}
                 alt={selectedGame.title}
                 className="md:w-[100%] md:h-[100%]  rounded-sm h-full lg:w-full max-h-[420px]"
-                loading="lazy"
               />
             </div>
           </div>

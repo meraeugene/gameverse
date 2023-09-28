@@ -77,7 +77,7 @@ const SwiperComponent = ({ games }: { games?: GameInfo[] }) => {
                   alt={game.title}
                   className="object-cover"
                   hash={game.hash}
-                  height={[175, 200, 300]}
+                  height={[200, 200, 300]}
                 />
               )}
               <div className="flex flex-col gap-2 mt-3">

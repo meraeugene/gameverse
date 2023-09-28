@@ -147,7 +147,7 @@ const GamesPlatform = ({ platformCategory }: { platformCategory: string }) => {
                 <BlurHashImage
                   src={game.image}
                   alt={`${game.title}-${game.platform} `}
-                  className="min-h-[150px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm "
+                  className="h-[200px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm "
                   height={[180, 200, 300]}
                   hash={game.hash}
                 />
