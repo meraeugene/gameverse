@@ -151,7 +151,7 @@ const GamesGenre = () => {
               <BlurHashImage
                 src={game.image}
                 alt={`${game.title}-${game.platform} `}
-                className="h-[200px] md:h-[200px] lg:h-[300px] w-full object-cover rounded-sm "
+                className="h-[200px] md:h-[200px] lg:h-[300px] xl:h-[360px] w-full object-cover rounded-sm "
                 hash={game.hash}
                 height={[200, 200, 300]}
               />

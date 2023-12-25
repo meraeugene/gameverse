@@ -56,13 +56,13 @@ const SwiperHeroImages = () => {
           spaceBetween: 20,
         },
         1440: {
-          slidesPerView: 6,
-          slidesPerGroup: 1,
+          slidesPerView: 2,
+          slidesPerGroup: 2,
           spaceBetween: 20,
         },
         2560: {
-          slidesPerView: 8,
-          slidesPerGroup: 1,
+          slidesPerView: 2,
+          slidesPerGroup: 2,
           spaceBetween: 20,
         },
       }}
