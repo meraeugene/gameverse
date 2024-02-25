@@ -37,7 +37,7 @@ const Home = () => {
     top10Games.push(gameInfo);
 
     // Check if the game is a new release (current year)
-    if (gameInfo.releasedYear === new Date().getFullYear()) {
+    if (gameInfo.releasedYear === 2023) {
       newGames.push(gameInfo);
     }
   }
